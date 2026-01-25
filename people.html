@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the team of the Evolutionary Modelling Group at KU Leuven - researchers studying antibiotic resistance, evolvability, mutational robustness, language evolution, and cultural evolution.">
+    <meta name="keywords" content="Piet van den Berg, Juliette Luiselli, Giorgio Boccarella, Alger Jorritsma, Ronja Hulst, Kat Van der Poorten, evolutionary biology, KU Leuven, PhD students, postdoc, theoretical biology">
+    <meta name="author" content="Evolutionary Modelling Group, KU Leuven">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Our Team | Evolutionary Modelling Group">
+    <meta property="og:description" content="Meet the researchers of the Evolutionary Modelling Group at KU Leuven.">
+    <meta property="og:image" content="images/group-photo.jpg">
+    <meta property="og:site_name" content="Evolutionary Modelling Group">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Team | Evolutionary Modelling Group">
+    <meta name="twitter:description" content="Meet the researchers of the Evolutionary Modelling Group at KU Leuven.">
+    <meta name="twitter:image" content="images/group-photo.jpg">
+
+    <title>People | Evolutionary Modelling Group</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/emg-logo.png">
+    <style>
+        .person-card-simple {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 2rem;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+            transition: box-shadow 0.2s ease;
+        }
+        .person-card-simple:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .person-card-simple.pi {
+            border: 2px solid var(--primary-color);
+            background: linear-gradient(135deg, var(--white) 0%, #f0f8f8 100%);
+        }
+        .person-photo-placeholder {
+            width: 180px;
+            height: 180px;
+            border-radius: var(--border-radius);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .person-photo-real {
+            width: 180px;
+            height: 180px;
+            border-radius: var(--border-radius);
+            object-fit: cover;
+            box-shadow: var(--shadow);
+        }
+        @media (max-width: 768px) {
+            .person-card-simple {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .person-photo-placeholder,
+            .person-photo-real {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="images/emg-logo.png" alt="EMG Logo">
+                <span class="site-title"><a href="index.html">Evolutionary Modelling Group</a></span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="people.html" class="active">People</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Our Team</h1>
+        <p class="section-intro" style="margin: 1rem 0 2rem 0;">
+            We are a diverse group of researchers united by our curiosity about how evolution shapes life. Meet the people behind the models.
+        </p>
+
+        <div class="people-grid">
+            <!-- PI -->
+            <article class="person-card-simple pi">
+                <img src="images/piet-vandenberg.jpg" alt="Piet van den Berg" class="person-photo-real">
+                <div class="person-info">
+                    <h3>Piet van den Berg</h3>
+                    <p class="person-role">Principal Investigator</p>
+                    <div class="person-research">
+                        <p>
+                            Piet leads the Evolutionary Modelling Group. His research focuses on microbial evolution (antibiotic resistance, evolvability, mutational robustness) as well as human cooperation and cultural evolution. The group works on a wide range of topics and collaborates closely with several empirical labs at KU Leuven and beyond.
+                        </p>
+                    </div>
+                    <p class="person-interests">
+                        <strong>Outside of work:</strong> Reading, cooking, music, movies, travelling, cycling, and sailing.
+                    </p>
+                    <p class="person-interests" style="margin-top: 0.5rem; font-style: italic; color: var(--text-light);">
+                        Fun fact: "Did you know I almost became a movie star at age 12? Studying evolutionary biology was my backup plan."
+                    </p>
+                </div>
+            </article>
+
+            <!-- Postdoc -->
+            <article class="person-card-simple">
+                <div class="person-photo-placeholder">JL</div>
+                <div class="person-info">
+                    <h3>Juliette Luiselli</h3>
+                    <p class="person-role">Postdoctoral Researcher</p>
+                    <div class="person-research">
+                        <p>
+                            Juliette's research focuses on the impact of chromosomal rearrangements on the evolution of coding and non-coding genome size. Ultimately, she aims to understand how genomes evolve to become robust to a wide range of mutations.
+                        </p>
+                    </div>
+                    <p class="person-interests">
+                        <strong>Outside of work:</strong> Cuddling cats, all types of sports (especially volleyball), and going on long bike trips!
+                    </p>
+                    <p class="person-interests" style="margin-top: 0.5rem; font-style: italic; color: var(--text-light);">
+                        "What fascinates me about evolution is that it led to people who question whether it can be true because something as perfect as the human eye exists, often while they are wearing glasses."
+                    </p>
+                    <div class="person-social">
+                        <a href="https://bsky.app/profile/Julietteluiselli.bsky.social" target="_blank" rel="noopener">BlueSky</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PhD Students -->
+            <article class="person-card-simple">
+                <div class="person-photo-placeholder">GB</div>
+                <div class="person-info">
+                    <h3>Giorgio Boccarella</h3>
+                    <p class="person-role">PhD Student</p>
+                    <div class="person-research">
+                        <p>
+                            Giorgio's research focuses on the evolution of antibiotic resistance. He develops evolutionary lineage models to understand how bacterial populations evolve resistance, and how factors like persistence (a dormant survival state) impact the speed, predictability, and magnitude of resistance evolution.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="person-card-simple">
+                <div class="person-photo-placeholder">AJ</div>
+                <div class="person-info">
+                    <h3>Alger Jorritsma</h3>
+                    <p class="person-role">PhD Student</p>
+                    <div class="person-research">
+                        <p>
+                            Alger's research deals with the evolution of plasticity and evolvability. He aims to understand the interaction between them, both functionally and mechanistically, using gene regulatory network models to explore how organisms evolve the capacity to adapt to changing environments.
+                        </p>
+                    </div>
+                    <p class="person-interests">
+                        <strong>Outside of research:</strong> All kinds of sports (mostly bouldering, cycling, and running), reading, drawing, and planning cool bike trips.
+                    </p>
+                    <p class="person-interests" style="margin-top: 0.5rem; font-style: italic; color: var(--text-light);">
+                        "I often get inspired by people with crazy ideas."
+                    </p>
+                </div>
+            </article>
+
+            <article class="person-card-simple">
+                <div class="person-photo-placeholder">RH</div>
+                <div class="person-info">
+                    <h3>Ronja Hulst</h3>
+                    <p class="person-role">PhD Candidate</p>
+                    <div class="person-research">
+                        <p>
+                            Ronja's research is about mutational robustness: how organisms evolve to tolerate mutations and what this means for adaptation and evolvability. She explores the fundamental trade-off between the need for stability and the capacity for evolutionary change.
+                        </p>
+                    </div>
+                    <p class="person-interests">
+                        <strong>Outside of research:</strong> All kinds of sports (especially kung fu!), travelling, hiking, going on adventures, music, dancing, gaming, philosophy, and reading.
+                    </p>
+                    <p class="person-interests" style="margin-top: 0.5rem; font-style: italic; color: var(--text-light);">
+                        "What fascinates me is how simple processes can give rise to life, complexity, and diversity. From the origin of life on Earth to the possibility of life elsewhere in the universe."
+                    </p>
+                    <div class="person-social">
+                        <a href="https://bsky.app/profile/Ronbaas.bsky.social" target="_blank" rel="noopener">BlueSky</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="person-card-simple">
+                <div class="person-photo-placeholder">KV</div>
+                <div class="person-info">
+                    <h3>Kat Van der Poorten</h3>
+                    <p class="person-role">PhD Student</p>
+                    <div class="person-research">
+                        <p>
+                            Kat's research investigates the origins of language. She uses evolutionary models to understand how human language emerges, and what might have been the selective pressures that have led to the integration of pre-existing cognitive capacities.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <section class="section" style="margin-top: 3rem;">
+            <h2>Join Our Team</h2>
+            <p>
+                We're always excited to meet curious people interested in evolutionary modelling. Whether you're a student looking for a thesis project or a researcher interested to join our lab or collaborate, please <a href="contact.html">get in touch</a>!
+            </p>
+            <p>
+                We value diverse perspectives and out-of-the-box thinking. Our group works on many different topics, which is a major advantage of doing theoretical work: plenty of opportunities for cross-pollination of ideas!
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logos">
+            <img src="images/emg-logo.png" alt="EMG">
+            <img src="images/ku-leuven-logo.png" alt="KU Leuven">
+        </div>
+        <p>Evolutionary Modelling Group | KU Leuven</p>
+        <p>Department of Biology &bull; Division of Ecology, Evolution and Biodiversity Conservation</p>
+        <p>Department of Microbial and Molecular Systems &bull; Center for Microbial and Plant Genetics</p>
+    </footer>
+
+    <script>
+        // Hamburger menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Research on antibiotic resistance evolution, evolvability, plasticity, mutational robustness, language evolution, and cultural evolution at the Evolutionary Modelling Group, KU Leuven.">
+    <meta name="keywords" content="antibiotic resistance, bacterial persistence, evolvability, phenotypic plasticity, mutational robustness, cryptic genetic variation, HSP90, language evolution, cultural evolution, social learning, gene regulatory networks, evolutionary simulation, theoretical biology, KU Leuven">
+    <meta name="author" content="Evolutionary Modelling Group, KU Leuven">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Research | Evolutionary Modelling Group">
+    <meta property="og:description" content="Research on antibiotic resistance evolution, evolvability, plasticity, mutational robustness, language evolution, and cultural evolution.">
+    <meta property="og:image" content="images/group-photo.jpg">
+    <meta property="og:site_name" content="Evolutionary Modelling Group">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Research | Evolutionary Modelling Group">
+    <meta name="twitter:description" content="Research on antibiotic resistance evolution, evolvability, plasticity, mutational robustness, language evolution, and cultural evolution.">
+    <meta name="twitter:image" content="images/group-photo.jpg">
+
+    <title>Research | Evolutionary Modelling Group</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/emg-logo.png">
+    <style>
+        .research-topic {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        .research-topic h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+        }
+        .research-topic h4 {
+            color: var(--primary-dark);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .key-findings {
+            background: var(--bg-warm);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+        }
+        .key-findings ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .key-findings li {
+            margin-bottom: 0.5rem;
+        }
+        .approach-box {
+            background: linear-gradient(135deg, #f0f8f8 0%, var(--white) 100%);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        .approach-box ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .approach-box li {
+            margin-bottom: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="images/emg-logo.png" alt="EMG Logo">
+                <span class="site-title"><a href="index.html">Evolutionary Modelling Group</a></span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="research.html" class="active">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Our Research</h1>
+
+        <div class="approach-box">
+            <h3 style="margin-top: 0;">Our Approach</h3>
+            <p>
+                We develop <strong>evolutionary models</strong> to address various questions in biology. Our toolkit includes:
+            </p>
+            <ul>
+                <li><strong>Evolutionary simulation models</strong> (usually in Python or C++) that track populations over many generations. These models can be individual-based (where each individual has its own genotype and other characteristics) or lineage-based, which allows for studying larger populations at the cost of individual detail.</li>
+                <li><strong>Mathematical evolutionary models</strong> that provide analytical insights. We have worked with systems of differential equations for some models, as well as population genetics and adaptive dynamics approaches.</li>
+            </ul>
+            <p style="margin-top: 1rem;">
+                We use these tools to gain a general understanding of evolutionary processes in complex situations, and to make specific predictions that can be tested experimentally through our collaborations.
+            </p>
+        </div>
+
+        <article class="research-topic">
+            <h3>Evolution of Antibiotic Resistance</h3>
+            <p>
+                Antibiotic resistance is a major global health threat. Understanding how bacterial populations evolve resistance is crucial for developing effective treatment strategies.
+            </p>
+
+            <h4>Resistance and Persistence</h4>
+            <p>
+                Bacteria can survive antibiotic treatment through two distinct mechanisms: <strong>resistance</strong> (genetic mutations that allow growth despite antibiotics) and <strong>persistence</strong> (a dormant state that protects cells from antibiotics without genetic change). We study how these two strategies interact and influence each other's evolution.
+            </p>
+
+            <h4>Key Questions</h4>
+            <p>
+                Using evolutionary lineage models, we explore how persistence impacts the evolution of resistance. The relationship is surprisingly complex: persistence improves the survival of wild-type and mutant subpopulations, but it can reduce opportunities for new resistance mutations to arise and spread.
+            </p>
+
+            <div class="key-findings">
+                <strong>Key Findings:</strong>
+                <ul>
+                    <li>High persistence leads to gradual and predictable evolution of modest resistance</li>
+                    <li>Low persistence leads to fast but unpredictable evolution of high resistance</li>
+                    <li>Persistence modulates a fundamental trade-off between survivability and evolvability</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="research-topic">
+            <h3>Evolution of Plasticity and Evolvability</h3>
+            <p>
+                How do organisms adapt to changing environments? Two main strategies exist: <strong>plasticity</strong> (changing the phenotype in response to environmental cues) and <strong>evolvability</strong> (the capacity to generate adaptive genetic variation through mutations).
+            </p>
+
+            <h4>When Does Each Strategy Evolve?</h4>
+            <p>
+                We use gene regulatory network models to understand when evolution favors plasticity versus evolvability. The answer depends on several factors: the speed of environmental change, the predictability of changes, and the reliability of environmental cues that organisms can use.
+            </p>
+
+            <div class="key-findings">
+                <strong>Key Findings:</strong>
+                <ul>
+                    <li>Environmental variability selects for high adaptive capacity</li>
+                    <li>Plasticity is favored when environmental cues are reliable</li>
+                    <li>Evolvability is favored when cues are unreliable and change is slower/more predictable</li>
+                    <li>Different network architectures evolve to support each strategy</li>
+                    <li>Plasticity and evolvability can evolve relatively independently in gene regulatory networks</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="research-topic">
+            <h3>Evolution of Mutational Robustness</h3>
+            <p>
+                Mutations are the fuel for evolution, yet most mutations are harmful. This creates a fundamental tension: how can organisms remain robust against deleterious mutations while maintaining the capacity to evolve?
+            </p>
+
+            <h4>Cryptic Genetic Variation</h4>
+            <p>
+                Mechanisms like the heat shock protein HSP90 can buffer the effects of mutations, rendering them "cryptic" (hidden). This allows genetic variation to accumulate without immediate fitness consequences. When environmental conditions change and the buffering mechanism is disrupted, this hidden variation can suddenly become visible to selection.
+            </p>
+
+            <h4>The Evolution of Robustness</h4>
+            <p>
+                We model how mutational robustness evolves depending on the frequency and impact of environmental change. Under what conditions does evolution favor mechanisms that hide mutations?
+            </p>
+
+            <div class="key-findings">
+                <strong>Key Findings:</strong>
+                <ul>
+                    <li>Robustness can evolve to enhance the evolvability of populations in changing environments</li>
+                    <li>High mutational robustness evolves when impact and frequency of environmental change are intermediate</li>
+                    <li>A metabolic cost of robustness reduces it in slowly changing environments, but not in rapidly changing ones</li>
+                </ul>
+            </div>
+
+            <p style="margin-top: 1.5rem;">
+                In a new line of research within this topic, we study how chromosomal rearrangements affect the evolution of robustness through selection on aspects of genomic architecture.
+            </p>
+        </article>
+
+        <article class="research-topic">
+            <h3>Evolution of Language</h3>
+            <p>
+                Human language is one of the most remarkable products of evolution. We use evolutionary models to investigate how the human capacity for compositional language originated.
+            </p>
+
+            <h4>Mechanisms and Function</h4>
+            <p>
+                We are interested in providing an account of language evolution that includes both mechanistic and functional aspects. On the mechanistic side, we hypothesize that pre-existing vertebrate capacities used for navigation and future-simulation provided the substrate for later language capacities. On the functional side, we hypothesize that it was the need for displaced communication (communicating about things that are not present here and now) that provided the selective arena for integrating these pre-existing capacities.
+            </p>
+        </article>
+
+        <article class="research-topic">
+            <h3>Cultural Evolution</h3>
+            <p>
+                In evolution, genetic information is passed on from parent to offspring, which causes parents and offspring to be phenotypically similar. However, this is not the only way information affecting the phenotype is transmitted. This can also occur through social learning, which allows a second, cultural evolutionary process to exist alongside (and in interaction with) genetic evolution. In humans, this process has led to an incredible accumulation of technology and a diversity of social norms. We have studied cultural evolution using both theoretical approaches and behavioral experiments.
+            </p>
+
+            <div class="key-findings">
+                <strong>Key Findings:</strong>
+                <ul>
+                    <li>Humans differ in the extent to which they learn socially (rather than individually) and that this has consequences for cooperation</li>
+                    <li>These individual differences in social learning may have resulted from unpredictable benefits of social information</li>
+                    <li>The attitudes of immigrants and residents (cultural conservatism, willingness to interact with other cultures) affect the likelihood that different cultural practices can co-exist in a society</li>
+                </ul>
+            </div>
+
+            <p style="margin-top: 1.5rem;">
+                In a new project, we will study how the complexity of cultural traits (often, you can only learn some traits depending on what you already know) affects the evolution and usefulness of different kinds of social learning.
+            </p>
+        </article>
+
+        <article class="research-topic">
+            <h3>Other Topics</h3>
+            <p>We also work on several other evolutionary questions:</p>
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                <li><strong>Evolution of cooperation</strong> – How does cooperation evolve and persist in populations?</li>
+                <li><strong>Cross-resistance and collateral sensitivity</strong> – How do bacteria evolve resistance patterns to multiple antibiotics?</li>
+            </ul>
+            <p style="margin-top: 1rem;">
+                One advantage of theoretical work is that we can explore many different topics. If you have an interesting evolutionary question, <a href="contact.html">get in touch</a>!
+            </p>
+        </article>
+
+        <section class="section">
+            <h2>Collaborations</h2>
+            <p>
+                While we focus on theoretical work, we collaborate closely with empirical labs to ensure our models make testable predictions and to refine our understanding based on experimental results. This interplay between theory and experiment is central to how we work.
+            </p>
+            <p>
+                We collaborate with researchers at KU Leuven and beyond. If you're interested in collaborating on evolutionary modelling questions, please <a href="contact.html">reach out</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logos">
+            <img src="images/emg-logo.png" alt="EMG">
+            <img src="images/ku-leuven-logo.png" alt="KU Leuven">
+        </div>
+        <p>Evolutionary Modelling Group | KU Leuven</p>
+        <p>Department of Biology &bull; Division of Ecology, Evolution and Biodiversity Conservation</p>
+        <p>Department of Microbial and Molecular Systems &bull; Center for Microbial and Plant Genetics</p>
+    </footer>
+
+    <script>
+        // Hamburger menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

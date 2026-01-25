@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Evolutionary Modelling Group at KU Leuven - Research on antibiotic resistance evolution, evolvability, plasticity, mutational robustness, language evolution, and cultural evolution using computational and mathematical models.">
+    <meta name="keywords" content="evolutionary biology, computational biology, evolutionary modelling, antibiotic resistance, evolvability, plasticity, mutational robustness, language evolution, cultural evolution, KU Leuven, Piet van den Berg, theoretical biology, gene regulatory networks, simulation models">
+    <meta name="author" content="Evolutionary Modelling Group, KU Leuven">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Evolutionary Modelling Group | KU Leuven">
+    <meta property="og:description" content="We develop evolutionary models to understand how living organisms adapt - from antibiotic resistance to human language evolution.">
+    <meta property="og:image" content="images/group-photo.jpg">
+    <meta property="og:site_name" content="Evolutionary Modelling Group">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Evolutionary Modelling Group | KU Leuven">
+    <meta name="twitter:description" content="We develop evolutionary models to understand how living organisms adapt - from antibiotic resistance to human language evolution.">
+    <meta name="twitter:image" content="images/group-photo.jpg">
+
+    <title>Evolutionary Modelling Group | KU Leuven</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/emg-logo.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ResearchOrganization",
+        "name": "Evolutionary Modelling Group",
+        "alternateName": "EMG",
+        "description": "Research group at KU Leuven developing evolutionary models to understand antibiotic resistance, evolvability, plasticity, mutational robustness, language evolution, and cultural evolution.",
+        "url": "https://www.evolutionarymodelling.be",
+        "logo": "images/emg-logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Naamsestraat 59",
+            "addressLocality": "Leuven",
+            "postalCode": "3000",
+            "addressCountry": "BE"
+        },
+        "parentOrganization": {
+            "@type": "CollegeOrUniversity",
+            "name": "KU Leuven",
+            "url": "https://www.kuleuven.be"
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "Piet van den Berg",
+            "jobTitle": "Principal Investigator",
+            "affiliation": "KU Leuven"
+        },
+        "knowsAbout": [
+            "Evolutionary Biology",
+            "Computational Biology",
+            "Antibiotic Resistance",
+            "Evolvability",
+            "Plasticity",
+            "Mutational Robustness",
+            "Language Evolution",
+            "Cultural Evolution",
+            "Gene Regulatory Networks",
+            "Theoretical Biology"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="images/emg-logo.png" alt="EMG Logo">
+                <span class="site-title"><a href="index.html">Evolutionary Modelling Group</a></span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- New Hero Section: Photo left, text right -->
+        <div class="hero-wrapper">
+            <div class="hero-image">
+                <img src="images/group-photo.jpg" alt="The Evolutionary Modelling Group team" class="group-photo">
+                <div class="hero-logos">
+                    <img src="images/emg-logo.png" alt="EMG">
+                    <img src="images/ku-leuven-logo.png" alt="KU Leuven">
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1>Evolutionary Modelling Group</h1>
+                <p class="subtitle">PI: Piet van den Berg</p>
+                <p class="hero-intro">
+                    We develop evolutionary models to understand how living organisms adapt. Using computer simulations and mathematical techniques, we investigate everything from antibiotic resistance to the evolution of human language.
+                </p>
+            </div>
+        </div>
+
+        <!-- Main content with BlueSky sidebar -->
+        <div class="home-main-content">
+            <div class="main-column">
+                <section class="section">
+                    <h2>About Our Research</h2>
+                    <p class="section-intro">
+                        We develop <strong>evolutionary models</strong> to address fundamental questions about how living organisms adapt to their (often changing) surroundings. To do this, we mainly develop computational models to run evolutionary simulations (in Python and C++), and also use mathematical frameworks to study evolution. In developing our models, we always try to balance simplicity and biological realism – not always an easy task!
+                    </p>
+                    <p>
+                        Much of our work aims to achieve a <strong>general understanding of evolutionary processes</strong> in complex situations: how traits evolve under opposing selection pressures, how organisms balance the need for stability with the capacity for change, and how populations adapt to fluctuating environments.
+                    </p>
+                    <p>
+                        Although some of our work aims for general insight rather than direct predictions, we also collaborate closely with empirical labs to generate specific predictions that can be tested experimentally.
+                    </p>
+                    <p>
+                        We work on many different topics, but the most important research lines currently include the following:
+                    </p>
+
+                    <div class="topics-grid">
+                        <div class="topic-card">
+                            <h3>Antibiotic Resistance</h3>
+                            <p>How do bacterial populations evolve resistance? We model the interplay between persistence (where bacteria temporarily become dormant to survive stress) and resistance evolution.</p>
+                        </div>
+                        <div class="topic-card">
+                            <h3>Evolvability & Plasticity</h3>
+                            <p>How do organisms evolve the capacity to adapt? We study when evolution favors plasticity, and when it favors a genetic organization that maximizes the capacity to generate adaptive mutations (evolvability).</p>
+                        </div>
+                        <div class="topic-card">
+                            <h3>Mutational Robustness</h3>
+                            <p>How do organisms tolerate mutations while maintaining the capacity to adapt? We investigate this fundamental trade-off with different kinds of models.</p>
+                        </div>
+                        <div class="topic-card">
+                            <h3>Language</h3>
+                            <p>How did human language evolve? We model how structural and semantic capacities co-evolved to yield human compositional language.</p>
+                        </div>
+                        <div class="topic-card">
+                            <h3>Culture</h3>
+                            <p>How does culture change? We use evolutionary tools to study cultural change, and how different forms of cultural transmission (social learning) may have evolved.</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 2rem; text-align: center;">
+                        <a href="research.html" class="scholar-link">Learn more about our research</a>
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2>Join Us</h2>
+                    <p>
+                        We're always excited to meet curious people interested in evolutionary modelling. Whether you're a student looking for a thesis project or a researcher interested to join our lab or collaborate, please <a href="contact.html">get in touch</a>!
+                    </p>
+                    <p>
+                        We value diverse perspectives and out-of-the-box thinking. Our group works on many different topics, which is a major advantage of doing theoretical work: plenty of opportunities for cross-pollination of ideas!
+                    </p>
+                </section>
+            </div>
+
+            <!-- BlueSky Sidebar -->
+            <aside class="bluesky-sidebar">
+                <div class="bluesky-sidebar-card">
+                    <div class="bluesky-sidebar-header">
+                        <h3>Latest Updates</h3>
+                    </div>
+                    <div id="bluesky-posts" class="bluesky-posts">
+                        <div style="padding: 2rem; text-align: center; color: #666;">
+                            Loading posts...
+                        </div>
+                    </div>
+                    <div class="bluesky-sidebar-footer">
+                        <a href="https://bsky.app/profile/vandenberglab.bsky.social" target="_blank" rel="noopener" class="bluesky-follow-btn">
+                            Follow @vandenberglab
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-logos">
+            <img src="images/emg-logo.png" alt="EMG">
+            <img src="images/ku-leuven-logo.png" alt="KU Leuven">
+        </div>
+        <p>Evolutionary Modelling Group | KU Leuven</p>
+        <p>Department of Biology &bull; Division of Ecology, Evolution and Biodiversity Conservation</p>
+        <p>Department of Microbial and Molecular Systems &bull; Center for Microbial and Plant Genetics</p>
+    </footer>
+
+    <script>
+        // BlueSky feed integration with images
+        async function loadBlueSkyFeed() {
+            const container = document.getElementById('bluesky-posts');
+            const handle = 'vandenberglab.bsky.social';
+
+            try {
+                // First resolve the DID
+                const didResponse = await fetch(`https://bsky.social/xrpc/com.atproto.identity.resolveHandle?handle=${handle}`);
+                if (!didResponse.ok) throw new Error('Could not resolve handle');
+                const didData = await didResponse.json();
+                const did = didData.did;
+
+                // Then fetch the feed
+                const feedResponse = await fetch(`https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${did}&limit=5`);
+                if (!feedResponse.ok) throw new Error('Could not fetch feed');
+                const feedData = await feedResponse.json();
+
+                if (feedData.feed && feedData.feed.length > 0) {
+                    let html = '';
+                    feedData.feed.forEach(item => {
+                        const post = item.post;
+                        const text = post.record.text || '';
+                        const date = new Date(post.record.createdAt).toLocaleDateString('en-GB', {
+                            year: 'numeric',
+                            month: 'short',
+                            day: 'numeric'
+                        });
+                        const uri = post.uri.split('/').pop();
+                        const postUrl = `https://bsky.app/profile/${handle}/post/${uri}`;
+
+                        // Check for embedded images
+                        let imagesHtml = '';
+                        if (post.embed && post.embed.images) {
+                            imagesHtml = '<div class="bluesky-post-images">';
+                            post.embed.images.forEach(img => {
+                                const thumbUrl = img.thumb || img.fullsize;
+                                const fullUrl = img.fullsize || img.thumb;
+                                if (thumbUrl) {
+                                    imagesHtml += `<a href="${fullUrl}" target="_blank" rel="noopener"><img src="${thumbUrl}" alt="${escapeHtml(img.alt || 'Image')}" loading="lazy"></a>`;
+                                }
+                            });
+                            imagesHtml += '</div>';
+                        }
+
+                        // Check for external embed (link cards)
+                        if (post.embed && post.embed.external && post.embed.external.thumb) {
+                            imagesHtml = '<div class="bluesky-post-images">';
+                            imagesHtml += `<a href="${post.embed.external.uri}" target="_blank" rel="noopener"><img src="${post.embed.external.thumb}" alt="${escapeHtml(post.embed.external.title || 'Link preview')}" loading="lazy"></a>`;
+                            imagesHtml += '</div>';
+                        }
+
+                        html += `
+                            <div class="bluesky-post">
+                                <div class="bluesky-post-text">${escapeHtml(text)}</div>
+                                ${imagesHtml}
+                                <div class="bluesky-post-date">
+                                    <a href="${postUrl}" target="_blank" rel="noopener">${date}</a>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    container.innerHTML = html;
+                } else {
+                    container.innerHTML = '<div style="padding: 1rem; text-align: center; color: #666;">No recent posts found.</div>';
+                }
+            } catch (error) {
+                console.error('Error loading BlueSky feed:', error);
+                container.innerHTML = `
+                    <div style="padding: 1.5rem; text-align: center;">
+                        <p style="color: #666; margin-bottom: 0.5rem;">Could not load posts</p>
+                        <p><a href="https://bsky.app/profile/vandenberglab.bsky.social" target="_blank" rel="noopener">View on BlueSky</a></p>
+                    </div>
+                `;
+            }
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Load feed when page loads
+        document.addEventListener('DOMContentLoaded', loadBlueSkyFeed);
+
+        // Hamburger menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

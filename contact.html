@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact the Evolutionary Modelling Group at KU Leuven. Interested in thesis projects, collaborations, or joining our lab? We'd love to hear from you.">
+    <meta name="keywords" content="contact, KU Leuven, Leuven, Belgium, thesis project, collaboration, evolutionary biology, computational biology, PhD position, postdoc, internship">
+    <meta name="author" content="Evolutionary Modelling Group, KU Leuven">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact | Evolutionary Modelling Group">
+    <meta property="og:description" content="Contact the Evolutionary Modelling Group at KU Leuven for thesis projects, collaborations, or joining our lab.">
+    <meta property="og:image" content="images/group-photo.jpg">
+    <meta property="og:site_name" content="Evolutionary Modelling Group">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact | Evolutionary Modelling Group">
+    <meta name="twitter:description" content="Contact the Evolutionary Modelling Group at KU Leuven for thesis projects, collaborations, or joining our lab.">
+    <meta name="twitter:image" content="images/group-photo.jpg">
+
+    <title>Contact | Evolutionary Modelling Group</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/emg-logo.png">
+    <style>
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .map-container {
+            margin-top: 2rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+        .success-message {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            display: none;
+        }
+        .email-protected {
+            background: var(--bg-warm);
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            display: inline-block;
+            font-family: monospace;
+        }
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="images/emg-logo.png" alt="EMG Logo">
+                <span class="site-title"><a href="index.html">Evolutionary Modelling Group</a></span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Contact Us</h1>
+        <p class="section-intro">
+            Interested in our research? Have questions about evolutionary modelling? Want to discuss a thesis project or collaboration? We'd love to hear from you!
+        </p>
+
+        <div class="contact-wrapper">
+            <div class="contact-form">
+                <h2>Send a Message</h2>
+
+                <div id="success-message" class="success-message">
+                    Thank you for your message! We'll get back to you soon.
+                </div>
+
+                <!-- Formspree form - replace YOUR_FORM_ID with actual Formspree form ID -->
+                <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Tell us what you're interested in..."></textarea>
+                    </div>
+
+                    <!-- Honeypot field for spam protection -->
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                    <em>Note: To activate this form, you'll need to set up a free <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> account and replace the form action URL.</em>
+                </p>
+            </div>
+
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+
+                <div class="contact-detail">
+                    <h4>Principal Investigator</h4>
+                    <p>Piet van den Berg</p>
+                </div>
+
+                <div class="contact-detail">
+                    <h4>Email</h4>
+                    <p>
+                        <span id="email-address" class="email-protected">[Click to reveal email]</span>
+                    </p>
+                </div>
+
+                <div class="contact-detail">
+                    <h4>Address</h4>
+                    <p>
+                        Naamsestraat 59<br>
+                        3000 Leuven<br>
+                        Belgium
+                    </p>
+                </div>
+
+                <div class="contact-detail">
+                    <h4>Affiliation</h4>
+                    <p>
+                        <a href="https://www.kuleuven.be/english/" target="_blank" rel="noopener">KU Leuven</a><br>
+                        <a href="https://bio.kuleuven.be/" target="_blank" rel="noopener">Department of Biology</a>, Division of Ecology, Evolution and Biodiversity Conservation<br>
+                        <a href="https://www.biw.kuleuven.be/m2s/" target="_blank" rel="noopener">Department of Microbial and Molecular Systems (M²S)</a>, Center for Microbial and Plant Genetics
+                    </p>
+                </div>
+
+                <div class="contact-detail">
+                    <h4>Discover Leuven</h4>
+                    <p>
+                        <a href="https://www.visitleuven.be/en" target="_blank" rel="noopener">Visit Leuven</a> &ndash; explore our beautiful university city
+                    </p>
+                </div>
+
+                <div class="contact-detail">
+                    <h4>Follow Us</h4>
+                    <p>
+                        <a href="https://bsky.app/profile/vandenberglab.bsky.social" target="_blank" rel="noopener">
+                            @vandenberglab on BlueSky
+                        </a>
+                    </p>
+                </div>
+
+                <div class="map-container">
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=4.697%2C50.875%2C4.703%2C50.878&amp;layer=mapnik&amp;marker=50.8765%2C4.7001"
+                        loading="lazy"
+                        title="Map showing location of KU Leuven, Naamsestraat 59">
+                    </iframe>
+                    <p style="margin: 0.5rem; font-size: 0.85rem;">
+                        <a href="https://www.openstreetmap.org/?mlat=50.8765&amp;mlon=4.7001#map=17/50.8765/4.7001" target="_blank" rel="noopener">
+                            View larger map
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <section class="section" style="margin-top: 3rem;">
+            <h2>For Prospective Students</h2>
+            <p>
+                We regularly supervise thesis projects at various levels (Bachelor's, Master's). If you're a student interested in evolutionary modelling, computational biology, or theoretical biology, we'd be happy to discuss potential projects.
+            </p>
+            <p>
+                Our projects typically involve developing simulation models in Python or C++, mathematical analysis of evolutionary dynamics, or a combination of both. No prior experience with evolutionary modelling is required, but enthusiasm for learning and curiosity about how evolution works are essential!
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logos">
+            <img src="images/emg-logo.png" alt="EMG">
+            <img src="images/ku-leuven-logo.png" alt="KU Leuven">
+        </div>
+        <p>Evolutionary Modelling Group | KU Leuven</p>
+        <p>Department of Biology &bull; Division of Ecology, Evolution and Biodiversity Conservation</p>
+        <p>Department of Microbial and Molecular Systems &bull; Center for Microbial and Plant Genetics</p>
+    </footer>
+
+    <script>
+        // Email protection: decode email address only when clicked
+        // This prevents simple email scrapers from harvesting the address
+        (function() {
+            const emailElement = document.getElementById('email-address');
+
+            // Encoded email parts (simple obfuscation)
+            const parts = ['piet', '.', 'vandenberg', '@', 'kuleuven', '.', 'be'];
+
+            let revealed = false;
+
+            emailElement.style.cursor = 'pointer';
+
+            emailElement.addEventListener('click', function() {
+                if (!revealed) {
+                    const email = parts.join('');
+                    emailElement.innerHTML = `<a href="mai` + `lto:${email}">${email}</a>`;
+                    revealed = true;
+                }
+            });
+
+            // Also reveal on hover after a delay (for users who expect hover)
+            let hoverTimeout;
+            emailElement.addEventListener('mouseenter', function() {
+                hoverTimeout = setTimeout(function() {
+                    if (!revealed) {
+                        const email = parts.join('');
+                        emailElement.innerHTML = `<a href="mai` + `lto:${email}">${email}</a>`;
+                        revealed = true;
+                    }
+                }, 500);
+            });
+
+            emailElement.addEventListener('mouseleave', function() {
+                clearTimeout(hoverTimeout);
+            });
+        })();
+
+        // Form submission handling
+        const form = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+
+        form.addEventListener('submit', async function(e) {
+            // If using Formspree's default behavior, this will redirect
+            // For AJAX submission (optional):
+            /*
+            e.preventDefault();
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    successMessage.style.display = 'block';
+                    form.reset();
+                } else {
+                    alert('There was an error sending your message. Please try again or email us directly.');
+                }
+            } catch (error) {
+                alert('There was an error sending your message. Please try again or email us directly.');
+            }
+            */
+        });
+
+        // Hamburger menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

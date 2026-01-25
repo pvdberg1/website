@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Publications from the Evolutionary Modelling Group at KU Leuven - peer-reviewed research on antibiotic resistance, evolvability, plasticity, mutational robustness, cooperation, and cultural evolution.">
+    <meta name="keywords" content="publications, research papers, Piet van den Berg, Nature Communications, PNAS, Evolution, antibiotic resistance, evolvability, plasticity, cooperation, cultural evolution, KU Leuven">
+    <meta name="author" content="Evolutionary Modelling Group, KU Leuven">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Publications | Evolutionary Modelling Group">
+    <meta property="og:description" content="Peer-reviewed publications from the Evolutionary Modelling Group at KU Leuven.">
+    <meta property="og:image" content="images/group-photo.jpg">
+    <meta property="og:site_name" content="Evolutionary Modelling Group">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Publications | Evolutionary Modelling Group">
+    <meta name="twitter:description" content="Peer-reviewed publications from the Evolutionary Modelling Group at KU Leuven.">
+    <meta name="twitter:image" content="images/group-photo.jpg">
+
+    <title>Publications | Evolutionary Modelling Group</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/emg-logo.png">
+    <style>
+        .publications-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .scholar-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+        .scholar-badge:hover {
+            background: var(--primary-dark);
+            color: white;
+            text-decoration: none;
+        }
+        .scholar-icon {
+            width: 20px;
+            height: 20px;
+        }
+        .year-section {
+            margin-bottom: 2rem;
+        }
+        .year-header {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .pub-item {
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+            transition: box-shadow 0.2s ease;
+        }
+        .pub-item:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .pub-title {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .pub-title a {
+            color: inherit;
+        }
+        .pub-title a:hover {
+            color: var(--primary-color);
+        }
+        .pub-authors {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+        .pub-authors strong {
+            color: var(--text-color);
+        }
+        .pub-venue {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        .pub-links {
+            margin-top: 0.75rem;
+        }
+        .pub-links a {
+            display: inline-block;
+            font-size: 0.85rem;
+            padding: 0.25rem 0.75rem;
+            background: var(--bg-warm);
+            border-radius: 4px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+        .equal-contrib {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="images/emg-logo.png" alt="EMG Logo">
+                <span class="site-title"><a href="index.html">Evolutionary Modelling Group</a></span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html" class="active">Publications</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="publications-header">
+            <div>
+                <h1>Publications</h1>
+                <p class="section-intro">Our research contributions to evolutionary biology.</p>
+            </div>
+            <a href="https://scholar.google.com/citations?user=HzcSj-kAAAAJ&hl=en" target="_blank" rel="noopener" class="scholar-badge">
+                <svg class="scholar-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
+                </svg>
+                View on Google Scholar
+            </a>
+        </div>
+
+        <div class="publications-intro section">
+            <p>
+                Below is a selection of our publications. For a complete and up-to-date list, please visit the
+                <a href="https://scholar.google.com/citations?user=HzcSj-kAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar profile</a>.
+            </p>
+        </div>
+
+        <!-- 2025 -->
+        <div class="year-section">
+            <h2 class="year-header">2025</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">The evolutionary role of mutational robustness: theoretical insights</div>
+                <div class="pub-authors">Hulst RI, Govers SK, Michiels J, Verstrepen KJ & <strong>van den Berg P</strong></div>
+                <div class="pub-venue">Trends in Genetics</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1016/j.tig.2024.11.008" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">The evolution of plasticity and evolvability in a simple gene regulatory network</div>
+                <div class="pub-authors">Jorritsma A & <strong>van den Berg P</strong></div>
+                <div class="pub-venue">Evolution</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1093/evolut/qpae183" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2024 -->
+        <div class="year-section">
+            <h2 class="year-header">2024</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">Unlocking the potential of experimental evolution to study drug resistance in pathogenic fungi</div>
+                <div class="pub-authors">Jacobs S, Boccarella G, <strong>van den Berg P</strong>, Van Dijck P & Carolus H</div>
+                <div class="pub-venue">npj Antimicrobials and Resistance 2: 48</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/s44259-024-00065-0" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Acquired amphotericin B resistance leads to fitness trade-offs that can be mitigated by compensatory evolution in Candida auris</div>
+                <div class="pub-authors">Carolus H, Sofras D, Boccarella G, Sephton-Clark P, Biriukov V, Cauldron NC, Lobo Romero C, Vergauwen R, Yazdani S, Pierson S, Jacobs S, Vandecruys P, Wijnants S, Meis SF, Gabaldon T, <strong>van den Berg P</strong>, Rybak JM, Cuomo CA, Van Dijck P</div>
+                <div class="pub-venue">Nature Microbiology 9: 3304-3320</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/s41564-024-01819-2" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Collateral sensitivity counteracts the evolution of antifungal drug resistance in Candida auris</div>
+                <div class="pub-authors">Carolus H, Sofras D, Boccarella G, Jacobs S, Biriukov V, Goossens L, Chen A, Vantyghem I, Verbeeck T, Pierson S, Lobo Romero C, Steenackers H, Lagrou K, <strong>van den Berg P</strong>, Berman J, Gabaldon T & Van Dijck P</div>
+                <div class="pub-venue">Nature Microbiology 9: 2954-2969</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/s41564-024-01757-z" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Unpredictable benefits of social information can lead to the evolution of individual differences in social learning</div>
+                <div class="pub-authors"><strong>van den Berg P</strong>, Vu TV, Molleman L</div>
+                <div class="pub-venue">Nature Communications 15: 5138</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/s41467-024-49318-0" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Mutational robustness and the role of buffer genes in evolvability</div>
+                <div class="pub-authors">Tawfeeq M, Voordeckers K, <strong>van den Berg P</strong>, Govers S, Michiels J, Verstrepen K</div>
+                <div class="pub-venue">EMBO Journal 36(6): 906-924</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/s44318-024-00044-9" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2022 -->
+        <div class="year-section">
+            <h2 class="year-header">2022</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">Evolution of self-organised division of labour driven by stigmergy in leaf-cutter ants</div>
+                <div class="pub-authors">Di Pietro V, Govoni P, Chan KH, Oliveira RC, Wenseleers T, <strong>van den Berg P</strong></div>
+                <div class="pub-venue">Scientific Reports 12: 21971</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/s41598-022-26304-6" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Misrepresentation of group contributions undermines conditional cooperation in a human decision making experiment</div>
+                <div class="pub-authors"><strong>van den Berg P</strong>, Liu S, Wenseleers T, Zhang J</div>
+                <div class="pub-venue">Scientific Reports 12: 12320</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/s41598-022-16606-2" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2021 -->
+        <div class="year-section">
+            <h2 class="year-header">2021</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">Beyond social learning</div>
+                <div class="pub-authors">Singh M, Acerbi A, Caldwell CA, Danchin E, Isabel G, Molleman L, Scott-Phillips T, Tamariz M, <strong>van den Berg P</strong>, van Leeuwen EJC, Derex M</div>
+                <div class="pub-venue">Philosophical Transactions of the Royal Society B: Biological Sciences 376: 20200050</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1098/rstb.2020.0050" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Foundations of cultural evolution</div>
+                <div class="pub-authors">Boon E, <strong>van den Berg P</strong>, Molleman L, Weissing FJ</div>
+                <div class="pub-venue">Philosophical Transactions of the Royal Society B: Biological Sciences 376: 20200041</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1098/rstb.2020.0041" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Uncertainty causes humans to use social heuristics and to cooperate more: an experiment among Belgian university students</div>
+                <div class="pub-authors"><strong>van den Berg P</strong>, De Witte S, Wenseleers T</div>
+                <div class="pub-venue">Evolution and Human Behavior 42: 223-229</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1016/j.evolhumbehav.2020.09.004" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2020 -->
+        <div class="year-section">
+            <h2 class="year-header">2020</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">How the incentive to contribute affects contributions in the one-shot public goods game</div>
+                <div class="pub-authors"><strong>van den Berg P</strong>, De Witte P, Aertgeerts I, Wenseleers T</div>
+                <div class="pub-venue">Scientific Reports 10: 18732</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/s41598-020-75816-0" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">A simulation model shows how individual differences affect major life decisions</div>
+                <div class="pub-authors">van der Gaag MAE*, <strong>van den Berg P</strong>*, Kunnen ES, Van Geert PLC</div>
+                <div class="pub-venue">Palgrave Communications 6: 67</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1057/s41599-020-0435-0" target="_blank" rel="noopener">DOI</a>
+                </div>
+                <div class="equal-contrib">*Equal contribution</div>
+            </div>
+        </div>
+
+        <!-- 2019 -->
+        <div class="year-section">
+            <h2 class="year-header">2019</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">A historical-genetic reconstruction of human extra-pair paternity</div>
+                <div class="pub-authors">Larmuseau MHD, <strong>van den Berg P</strong>, Claerhout S, Calafell F, Boattini A, Gruyters L, Vandenbosch M, Nivelle K, Decorte R & Wenseleers T</div>
+                <div class="pub-venue">Current Biology 29: 1-6</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1016/j.cub.2019.09.075" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2018 -->
+        <div class="year-section">
+            <h2 class="year-header">2018</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">Uncertainty about social interactions leads to the evolution of social heuristics</div>
+                <div class="pub-authors"><strong>van den Berg P</strong> & Wenseleers T</div>
+                <div class="pub-venue">Nature Communications 9: 2151</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/s41467-018-04493-1" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Acculturation orientations affect the evolution of a multicultural society</div>
+                <div class="pub-authors">Erten EY*, <strong>van den Berg P</strong>* & Weissing FJ</div>
+                <div class="pub-venue">Nature Communications 9: 58</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/s41467-017-02513-0" target="_blank" rel="noopener">DOI</a>
+                </div>
+                <div class="equal-contrib">*Equal contribution</div>
+            </div>
+        </div>
+
+        <!-- 2017 -->
+        <div class="year-section">
+            <h2 class="year-header">2017</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">Assortment, but not knowledge of assortment, affects cooperation and individual success in human groups</div>
+                <div class="pub-authors">Junikka J, Molleman M, <strong>van den Berg P</strong>, Weissing FJ & Puurtinen M</div>
+                <div class="pub-venue">PLoS ONE 12: e0185859</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1371/journal.pone.0185859" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Genetic-genealogy approach reveals low rate of extrapair paternity in historical Dutch populations</div>
+                <div class="pub-authors">Larmuseau MHD, Claerhout S, Gruyters L, Nivelle K, Vandenbosch M, Peeters A, <strong>van den Berg P</strong>, Wenseleers T & Decorte R</div>
+                <div class="pub-venue">American Journal of Human Biology 29(6): e23046</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1002/ajhb.23046" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2015 -->
+        <div class="year-section">
+            <h2 class="year-header">2015</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">Human cooperation in groups: variation begets variation</div>
+                <div class="pub-authors"><strong>van den Berg P</strong>, Molleman L, Junikka J, Puurtinen M & Weissing FJ</div>
+                <div class="pub-venue">Scientific Reports 5: 16144</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/srep16144" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">The importance of mechanisms for the evolution of cooperation</div>
+                <div class="pub-authors"><strong>van den Berg P</strong> & Weissing FJ</div>
+                <div class="pub-venue">Proceedings of the Royal Society B: Biological Sciences 282: 20151382</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1098/rspb.2015.1382" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Focus on the success of others leads to selfish behavior</div>
+                <div class="pub-authors"><strong>van den Berg P</strong>*, Molleman L* & Weissing FJ</div>
+                <div class="pub-venue">Proceedings of the National Academy of Sciences of the USA 112(9): 2912-2917</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1073/pnas.1417203112" target="_blank" rel="noopener">DOI</a>
+                </div>
+                <div class="equal-contrib">*Equal contribution</div>
+            </div>
+        </div>
+
+        <!-- 2014 -->
+        <div class="year-section">
+            <h2 class="year-header">2014</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">Consistent individual differences in human social learning strategies</div>
+                <div class="pub-authors">Molleman L*, <strong>van den Berg P</strong>* & Weissing FJ</div>
+                <div class="pub-venue">Nature Communications 5: 3870</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1038/ncomms4870" target="_blank" rel="noopener">DOI</a>
+                </div>
+                <div class="equal-contrib">*Equal contribution</div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Conflict over resources generates conflict over mate choice: reply to Smaldino and Newson</div>
+                <div class="pub-authors"><strong>van den Berg P</strong>, Fawcett TW, Buunk AP & Weissing FJ</div>
+                <div class="pub-venue">Evolution and Human Behavior 35: 157-159</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1016/j.evolhumbehav.2013.12.002" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2013 -->
+        <div class="year-section">
+            <h2 class="year-header">2013</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">The evolution of parent-offspring conflict over mate choice</div>
+                <div class="pub-authors"><strong>van den Berg P</strong>, Fawcett TW, Buunk AP & Weissing FJ</div>
+                <div class="pub-venue">Evolution and Human Behavior 34: 405-411</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1016/j.evolhumbehav.2013.07.004" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2012 -->
+        <div class="year-section">
+            <h2 class="year-header">2012</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">The social costs of punishment</div>
+                <div class="pub-authors"><strong>van den Berg P</strong>, Molleman L & Weissing FJ</div>
+                <div class="pub-venue">Behavioral and Brain Sciences 35: 42-43</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1017/S0140525X11001488" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2010 -->
+        <div class="year-section">
+            <h2 class="year-header">2010</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">Intergenerational conflict over parental investment</div>
+                <div class="pub-authors">Fawcett TW, <strong>van den Berg P</strong>, Weissing FJ, Park JH & Buunk AP</div>
+                <div class="pub-venue">Behavioral and Brain Sciences 33: 23-24</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1017/S0140525X09991633" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Repression of competition favours cooperation: experimental evidence from bacteria</div>
+                <div class="pub-authors">Kummerli R*, <strong>van den Berg P</strong>*, Griffin AS, West SA & Gardner A</div>
+                <div class="pub-venue">Journal of Evolutionary Biology 23: 699-706</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1111/j.1420-9101.2010.01936.x" target="_blank" rel="noopener">DOI</a>
+                </div>
+                <div class="equal-contrib">*Equal contribution</div>
+            </div>
+        </div>
+
+        <!-- Book Chapters -->
+        <div class="year-section">
+            <h2 class="year-header">Book Chapters</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">Modelling the individual process of career choice</div>
+                <div class="pub-authors">van der Gaag MAE & <strong>van den Berg P</strong></div>
+                <div class="pub-venue">In: Advances in Social Simulation 2015 (Jager et al., eds.) Springer International Publishing, 2017</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1007/978-3-319-47253-9_26" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Kin interest in mating relationships</div>
+                <div class="pub-authors"><strong>van den Berg P</strong></div>
+                <div class="pub-venue">In: Encyclopedia of Evolutionary Psychological Science (eds. Weekes-Shackelford V, Shackelford TK). Springer International Publishing, 2016</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1007/978-3-319-16999-6_1818-1" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Evolutionary game theory and personality</div>
+                <div class="pub-authors"><strong>van den Berg P</strong> & Weissing FJ</div>
+                <div class="pub-venue">In: Evolutionary Perspectives on Social Psychology (eds. Zeigler-Hill V, Welling LLM, Shackelford TK), pp 451-463. Springer International Publishing, 2015</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1007/978-3-319-12697-5_34" target="_blank" rel="noopener">DOI</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-logos">
+            <img src="images/emg-logo.png" alt="EMG">
+            <img src="images/ku-leuven-logo.png" alt="KU Leuven">
+        </div>
+        <p>Evolutionary Modelling Group | KU Leuven</p>
+        <p>Department of Biology &bull; Division of Ecology, Evolution and Biodiversity Conservation</p>
+        <p>Department of Microbial and Molecular Systems &bull; Center for Microbial and Plant Genetics</p>
+    </footer>
+
+    <script>
+        // Hamburger menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
