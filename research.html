@@ -24,6 +24,18 @@
     <title>Research | Evolutionary Modelling Group</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/emg-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script>
+    // Clear prehistoric mode on page refresh (but keep it during navigation)
+    if (performance.navigation && performance.navigation.type === 1) {
+        sessionStorage.removeItem('prehistoricMode');
+    } else if (performance.getEntriesByType && performance.getEntriesByType('navigation').length > 0) {
+        if (performance.getEntriesByType('navigation')[0].type === 'reload') {
+            sessionStorage.removeItem('prehistoricMode');
+        }
+    }
+    if(sessionStorage.getItem('prehistoricMode')==='true')document.documentElement.className='prehistoric-pending';
+</script>
     <style>
         .research-topic {
             margin-bottom: 3rem;
@@ -31,6 +43,10 @@
             background: var(--white);
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
+            transition: box-shadow 0.2s ease;
+        }
+        .research-topic:hover {
+            box-shadow: var(--shadow-hover);
         }
         .research-topic h3 {
             font-size: 1.5rem;
@@ -237,7 +253,7 @@
             </p>
         </article>
 
-        <section class="section">
+        <section class="section warm-section-dark">
             <h2>Collaborations</h2>
             <p>
                 While we focus on theoretical work, we collaborate closely with empirical labs to ensure our models make testable predictions and to refine our understanding based on experimental results. This interplay between theory and experiment is central to how we work.
@@ -264,6 +280,10 @@
             this.classList.toggle('active');
             document.querySelector('nav').classList.toggle('active');
         });
+        // Check for prehistoric mode (survives navigation, not refresh)
+        if (sessionStorage.getItem('prehistoricMode') === 'true') {
+            document.body.classList.add('prehistoric');
+        }
     </script>
 </body>
 </html>

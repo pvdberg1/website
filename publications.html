@@ -24,6 +24,18 @@
     <title>Publications | Evolutionary Modelling Group</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/emg-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script>
+    // Clear prehistoric mode on page refresh (but keep it during navigation)
+    if (performance.navigation && performance.navigation.type === 1) {
+        sessionStorage.removeItem('prehistoricMode');
+    } else if (performance.getEntriesByType && performance.getEntriesByType('navigation').length > 0) {
+        if (performance.getEntriesByType('navigation')[0].type === 'reload') {
+            sessionStorage.removeItem('prehistoricMode');
+        }
+    }
+    if(sessionStorage.getItem('prehistoricMode')==='true')document.documentElement.className='prehistoric-pending';
+</script>
     <style>
         .year-section {
             margin-bottom: 2rem;
@@ -123,7 +135,7 @@
                 <div class="pub-authors">Hulst RI, Govers SK, Michiels J, Verstrepen KJ & van den Berg P</div>
                 <div class="pub-venue">Trends in Genetics</div>
                 <div class="pub-links">
-                    <a href="https://doi.org/10.1016/j.tig.2024.11.008" target="_blank" rel="noopener">DOI</a>
+                    <a href="https://doi.org/10.1016/j.tig.2025.10.011" target="_blank" rel="noopener">DOI</a>
                 </div>
             </div>
 
@@ -237,7 +249,7 @@
                 <div class="pub-authors">van den Berg P, De Witte S, Wenseleers T</div>
                 <div class="pub-venue">Evolution and Human Behavior 42: 223-229</div>
                 <div class="pub-links">
-                    <a href="https://doi.org/10.1016/j.evolhumbehav.2020.09.004" target="_blank" rel="noopener">DOI</a>
+                    <a href="https://doi.org/10.1016/j.evolhumbehav.2020.10.003" target="_blank" rel="noopener">DOI</a>
                 </div>
             </div>
         </div>
@@ -379,7 +391,7 @@
                 <div class="pub-authors">van den Berg P, Fawcett TW, Buunk AP & Weissing FJ</div>
                 <div class="pub-venue">Evolution and Human Behavior 35: 157-159</div>
                 <div class="pub-links">
-                    <a href="https://doi.org/10.1016/j.evolhumbehav.2013.12.003" target="_blank" rel="noopener">DOI</a>
+                    <a href="https://doi.org/10.1016/j.evolhumbehav.2013.12.004" target="_blank" rel="noopener">DOI</a>
                 </div>
             </div>
         </div>
@@ -486,6 +498,10 @@
             this.classList.toggle('active');
             document.querySelector('nav').classList.toggle('active');
         });
+        // Check for prehistoric mode (survives navigation, not refresh)
+        if (sessionStorage.getItem('prehistoricMode') === 'true') {
+            document.body.classList.add('prehistoric');
+        }
     </script>
 </body>
 </html>

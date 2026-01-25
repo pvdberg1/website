@@ -67,6 +67,32 @@
         ]
     }
     </script>
+    <style>
+        /* Dinosaur Easter Egg */
+        .dino-easter-egg {
+            display: inline-block;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+        .dino-easter-egg:hover {
+            transform: scale(1.2);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script>
+    // Clear prehistoric mode on page refresh (but keep it during navigation)
+    if (performance.navigation && performance.navigation.type === 1) {
+        sessionStorage.removeItem('prehistoricMode');
+    } else if (performance.getEntriesByType && performance.getEntriesByType('navigation').length > 0) {
+        if (performance.getEntriesByType('navigation')[0].type === 'reload') {
+            sessionStorage.removeItem('prehistoricMode');
+        }
+    }
+    if(sessionStorage.getItem('prehistoricMode')==='true')document.documentElement.className='prehistoric-pending';
+</script>
 </head>
 <body>
     <header>
@@ -96,14 +122,15 @@
         <!-- New Hero Section: Photo left, text right -->
         <div class="hero-wrapper">
             <div class="hero-image">
-                <img src="images/group-photo.jpg" alt="The Evolutionary Modelling Group team" class="group-photo">
+                <img src="images/group-photo.jpg" alt="The Evolutionary Modelling Group team" class="group-photo group-photo-normal">
+                <img src="images/group-photo-prehistoric.png" alt="The Evolutionary Modelling Group team - Prehistoric Edition" class="group-photo group-photo-prehistoric">
                 <div class="hero-logos">
                     <img src="images/emg-logo.png" alt="EMG">
                     <img src="images/ku-leuven-logo.png" alt="KU Leuven">
                 </div>
             </div>
             <div class="hero-content">
-                <h1>Evolutionary Modelling Group</h1>
+                <h1>Evolutionary Modelling Group <span class="dino-easter-egg" id="dino-trigger" title="Click me!">🦕</span></h1>
                 <p class="subtitle">PI: Piet van den Berg</p>
                 <p class="hero-intro">
                     We develop evolutionary models to understand how living organisms adapt. Using computer simulations and mathematical techniques, we investigate everything from antibiotic resistance to the evolution of human language.
@@ -157,7 +184,7 @@
                     </p>
                 </section>
 
-                <section class="section">
+                <section class="section warm-section-dark">
                     <h2>Join Us</h2>
                     <p>
                         We're always excited to meet curious people interested in evolutionary modelling. Whether you're a student looking for a thesis project or a researcher interested to join our lab or collaborate, please <a href="contact.html">get in touch</a>!
@@ -290,6 +317,26 @@
             this.classList.toggle('active');
             document.querySelector('nav').classList.toggle('active');
         });
+
+        // Dinosaur Easter Egg - Toggle Prehistoric Theme!
+        const dinoTrigger = document.getElementById('dino-trigger');
+        if (dinoTrigger) {
+            dinoTrigger.addEventListener('click', function() {
+                document.body.classList.toggle('prehistoric');
+                if (document.body.classList.contains('prehistoric')) {
+                    this.textContent = '🦖';
+                    sessionStorage.setItem('prehistoricMode', 'true');
+                } else {
+                    this.textContent = '🦕';
+                    sessionStorage.removeItem('prehistoricMode');
+                }
+            });
+            // Check if prehistoric mode was enabled (survives navigation, not refresh)
+            if (sessionStorage.getItem('prehistoricMode') === 'true') {
+                document.body.classList.add('prehistoric');
+                dinoTrigger.textContent = '🦖';
+            }
+        }
     </script>
 </body>
 </html>

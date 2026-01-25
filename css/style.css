@@ -38,7 +38,7 @@ body {
     font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.75;
     color: var(--text-color);
-    background-color: var(--bg-color);
+    background-color: #fdfcfb;
 }
 
 /* Typography */
@@ -66,9 +66,9 @@ h2::after {
     position: absolute;
     bottom: -4px;
     left: 0;
-    width: 60px;
+    width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--accent-warm));
     border-radius: 2px;
 }
 
@@ -335,6 +335,16 @@ main {
     box-shadow: var(--shadow-soft);
 }
 
+/* Warm themed sections (Join Us, Collaborations, etc.) */
+.section.warm-section {
+    background: linear-gradient(135deg, #f5ede4 0%, #f0e6d9 100%);
+}
+
+/* Darker warm sections for bottom cards */
+.section.warm-section-dark {
+    background: linear-gradient(135deg, #eae0d2 0%, #e2d6c8 100%);
+}
+
 .section-intro {
     font-size: 1.1rem;
     color: var(--text-light);
@@ -350,7 +360,7 @@ main {
 }
 
 .topic-card {
-    background: linear-gradient(135deg, var(--bg-cream) 0%, var(--white) 100%);
+    background: linear-gradient(135deg, #f5ede4 0%, #f0e6d9 100%);
     padding: 1.5rem;
     border-radius: var(--border-radius);
     border-left: 4px solid var(--primary-color);
@@ -372,6 +382,10 @@ main {
 
 .topic-card:nth-child(4) {
     border-left-color: var(--accent-coral);
+}
+
+.topic-card:nth-child(5) {
+    border-left-color: var(--primary-light);
 }
 
 .topic-card h3 {
@@ -405,7 +419,7 @@ main {
 }
 
 .bluesky-sidebar-header {
-    background: linear-gradient(135deg, #0085ff 0%, #00a8ff 100%);
+    background: linear-gradient(135deg, var(--accent-warm) 0%, var(--accent-coral) 100%);
     color: white;
     padding: 1rem 1.25rem;
 }
@@ -515,7 +529,7 @@ main {
 
 .person-card.pi {
     border: 2px solid var(--primary-color);
-    background: linear-gradient(135deg, var(--white) 0%, var(--bg-cream) 100%);
+    background: linear-gradient(135deg, var(--white) 0%, #f0f8f8 100%);
 }
 
 .person-photo {
@@ -578,6 +592,11 @@ main {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-soft);
     border-left: 4px solid var(--primary-color);
+    transition: box-shadow 0.2s ease;
+}
+
+.publication-item:hover {
+    box-shadow: var(--shadow-hover);
 }
 
 .publication-title {
@@ -739,8 +758,22 @@ footer {
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-dark) 100%);
     color: var(--white);
     text-align: center;
-    padding: 2.5rem 2rem;
+    padding: 3.5rem 2rem 2.5rem 2rem;
     margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 100px;
+    background: #fdfcfb;
+    border-radius: 0 0 50% 50%;
 }
 
 .footer-logos {
@@ -856,15 +889,19 @@ footer p {
 
     .hero-image .hero-logos {
         position: absolute;
-        bottom: 0.75rem;
-        left: 0.75rem;
+        bottom: 0.5rem;
+        right: 0.5rem;
+        left: auto;
         margin-top: 0;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-end;
+        padding: 0.4rem;
+        gap: 0.3rem;
+        border-radius: 6px;
     }
 
     .hero-image .hero-logos img {
-        width: 60px;
+        width: 50px;
     }
 
     .hero h1 {
@@ -915,4 +952,371 @@ footer p {
         box-shadow: none;
         border: 1px solid #ddd;
     }
+}
+
+/* ===== PREHISTORIC THEME - 90s Game Style! ===== */
+body.prehistoric {
+    background: #2d5016 !important;
+    font-family: 'Press Start 2P', 'Courier New', monospace !important;
+    image-rendering: pixelated;
+}
+body.prehistoric * {
+    font-family: 'Press Start 2P', 'Courier New', monospace !important;
+}
+body.prehistoric header {
+    background: linear-gradient(180deg, #8B4513 0%, #654321 100%) !important;
+    border-bottom: 4px solid #FFD700;
+    box-shadow: 0 4px 0 #3d2914;
+}
+body.prehistoric .site-title {
+    color: #FFD700 !important;
+    text-shadow: 2px 2px 0 #000;
+    font-size: 0.9rem !important;
+}
+body.prehistoric .site-title a {
+    color: #FFD700 !important;
+}
+body.prehistoric nav a {
+    color: #90EE90 !important;
+    text-shadow: 1px 1px 0 #000;
+    border: 2px solid transparent;
+}
+body.prehistoric nav a:hover,
+body.prehistoric nav a.active {
+    background: #654321 !important;
+    border: 2px solid #FFD700;
+}
+body.prehistoric main {
+    background: repeating-linear-gradient(
+        0deg,
+        #2d5016 0px,
+        #2d5016 4px,
+        #3d6018 4px,
+        #3d6018 8px
+    );
+}
+body.prehistoric h1, body.prehistoric h2, body.prehistoric h3, body.prehistoric h4 {
+    color: #FFD700 !important;
+    text-shadow: 2px 2px 0 #000;
+}
+body.prehistoric h2::after {
+    background: #FFD700 !important;
+    height: 3px;
+}
+body.prehistoric p, body.prehistoric li, body.prehistoric span {
+    color: #f5deb3 !important;
+    line-height: 2;
+}
+body.prehistoric a {
+    color: #90EE90 !important;
+}
+body.prehistoric .section {
+    background: #5c4033 !important;
+    border: 3px solid #8B4513 !important;
+    border-radius: 0 !important;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+}
+body.prehistoric .topic-card {
+    background: #3d2a1e !important;
+    border: 3px solid #8B4513 !important;
+    border-left: 6px solid #FFD700 !important;
+    border-radius: 0 !important;
+}
+body.prehistoric .topic-card h3::before {
+    content: '🦠 ';
+}
+body.prehistoric .topic-card:nth-child(2) h3::before {
+    content: '🌿 ';
+}
+body.prehistoric .topic-card:nth-child(3) h3::before {
+    content: '🦴 ';
+}
+body.prehistoric .topic-card:nth-child(4) h3::before {
+    content: '🗣️ ';
+}
+body.prehistoric .topic-card:nth-child(5) h3::before {
+    content: '🏺 ';
+}
+body.prehistoric .section h2 {
+    position: relative;
+}
+body.prehistoric .section h2::after {
+    /* Keep the underline */
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: #FFD700 !important;
+    border-radius: 2px;
+}
+body.prehistoric .section h2::before {
+    content: ' 🌋';
+    float: right;
+    margin-left: 0.5rem;
+}
+body.prehistoric .scholar-link {
+    background: linear-gradient(180deg, #8B4513 0%, #654321 100%) !important;
+    border: 3px solid #FFD700 !important;
+    border-radius: 0 !important;
+    box-shadow: 3px 3px 0 #000;
+    text-transform: uppercase;
+    font-size: 0.6rem !important;
+}
+body.prehistoric .scholar-link:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 #000;
+}
+
+/* Hero section prehistoric */
+body.prehistoric .hero-wrapper {
+    background: #4a3728;
+    border: 4px solid #8B4513;
+    border-radius: 0 !important;
+    padding: 1rem;
+    box-shadow: 8px 8px 0 rgba(0,0,0,0.5);
+}
+/* Prehistoric group photo toggle */
+.group-photo-prehistoric {
+    display: none;
+}
+body.prehistoric .group-photo-normal {
+    display: none;
+}
+body.prehistoric .group-photo-prehistoric {
+    display: block;
+    border-radius: 0 !important;
+    border: 4px solid #654321;
+}
+body.prehistoric .person-photo-real {
+    border-radius: 0 !important;
+    border: 3px solid #654321;
+    filter: sepia(40%) saturate(60%) contrast(1.2) brightness(1.05) blur(0.8px);
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+}
+/* Dinosaur is added via HTML on homepage, not CSS */
+body.prehistoric .hero-logos {
+    background: rgba(93, 64, 55, 0.95) !important;
+    border: 2px solid #8B4513;
+    border-radius: 0 !important;
+}
+body.prehistoric .dino-easter-egg {
+    font-size: 1.8rem;
+    animation: dinoWalk 0.5s steps(2) infinite;
+    vertical-align: middle;
+}
+@keyframes dinoWalk {
+    0%, 100% { transform: scaleX(1); }
+    50% { transform: scaleX(-1); }
+}
+
+/* BlueSky sidebar prehistoric */
+body.prehistoric .bluesky-sidebar-card {
+    background: #5c4033 !important;
+    border: 3px solid #8B4513 !important;
+    border-radius: 0 !important;
+}
+body.prehistoric .bluesky-sidebar-header {
+    background: linear-gradient(180deg, #cc5500 0%, #8B4513 100%) !important;
+    border-bottom: 3px solid #FFD700;
+}
+body.prehistoric .bluesky-sidebar-header h3::before {
+    content: '📜 ';
+}
+body.prehistoric .bluesky-post {
+    border-color: #8B4513 !important;
+}
+body.prehistoric .bluesky-post::before {
+    content: '🪨 ';
+    font-size: 0.8rem;
+}
+
+/* Person cards prehistoric */
+body.prehistoric .person-card-simple,
+body.prehistoric .person-card {
+    background: #5c4033 !important;
+    border: 3px solid #8B4513 !important;
+    border-radius: 0 !important;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+}
+body.prehistoric .person-card-simple.pi,
+body.prehistoric .person-card.pi {
+    border: 3px solid #FFD700 !important;
+    background: #4a3425 !important;
+}
+body.prehistoric .person-role {
+    color: #90EE90 !important;
+}
+body.prehistoric .person-card-simple:nth-child(1) .person-role::before {
+    content: '🦖 ';
+}
+body.prehistoric .person-card-simple:nth-child(2) .person-role::before {
+    content: '🌿 ';
+}
+body.prehistoric .person-card-simple:nth-child(3) .person-role::before {
+    content: '🦴 ';
+}
+body.prehistoric .person-card-simple:nth-child(4) .person-role::before {
+    content: '🌋 ';
+}
+body.prehistoric .person-card-simple:nth-child(5) .person-role::before {
+    content: '🥚 ';
+}
+body.prehistoric .person-card-simple:nth-child(6) .person-role::before {
+    content: '🪨 ';
+}
+body.prehistoric .person-photo-placeholder {
+    background: linear-gradient(135deg, #8B4513 0%, #654321 100%) !important;
+    border-radius: 0 !important;
+    border: 3px solid #FFD700;
+}
+
+/* Research page prehistoric */
+body.prehistoric .research-topic {
+    background: #5c4033 !important;
+    border: 3px solid #8B4513 !important;
+    border-radius: 0 !important;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+}
+body.prehistoric .research-topic h3 {
+    position: relative;
+}
+body.prehistoric .research-topic h3::after {
+    content: ' 🦖';
+    float: right;
+    margin-left: 0.5rem;
+}
+body.prehistoric .research-topic:nth-child(2) h3::after {
+    content: ' 🌿';
+}
+body.prehistoric .research-topic:nth-child(3) h3::after {
+    content: ' 🦴';
+}
+body.prehistoric .research-topic:nth-child(4) h3::after {
+    content: ' 🌋';
+}
+body.prehistoric .research-topic:nth-child(5) h3::after {
+    content: ' 🥚';
+}
+body.prehistoric .research-topic:nth-child(6) h3::after {
+    content: ' 🪨';
+}
+body.prehistoric .key-findings {
+    background: #3d2a1e !important;
+    border: 2px solid #8B4513 !important;
+}
+body.prehistoric .approach-box {
+    background: #3d2a1e !important;
+    border-left: 4px solid #FFD700 !important;
+}
+
+/* Publications prehistoric */
+body.prehistoric .pub-item,
+body.prehistoric .publication-item {
+    background: #4a3828 !important;
+    border: 3px solid #8B4513 !important;
+    border-left: 6px solid #FFD700 !important;
+    border-radius: 0 !important;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+}
+body.prehistoric .pub-title,
+body.prehistoric .publication-title {
+    color: #FFD700 !important;
+    text-shadow: 1px 1px 0 #000;
+}
+body.prehistoric .pub-title::before,
+body.prehistoric .publication-title::before {
+    content: '📜 ';
+}
+body.prehistoric .pub-authors {
+    color: #e8dcc8 !important;
+}
+body.prehistoric .pub-venue {
+    color: #c4b8a4 !important;
+}
+body.prehistoric .equal-contrib {
+    color: #a89880 !important;
+}
+body.prehistoric .year-header {
+    position: relative;
+    border-bottom-color: #FFD700 !important;
+}
+body.prehistoric .year-header::after {
+    content: ' 🦴';
+    float: right;
+    margin-left: 0.5rem;
+}
+body.prehistoric .pub-links a {
+    background: #654321 !important;
+    border: 2px solid #FFD700 !important;
+    border-radius: 0 !important;
+    color: #90EE90 !important;
+}
+
+/* Contact page prehistoric */
+body.prehistoric .contact-form,
+body.prehistoric .contact-info {
+    background: #5c4033 !important;
+    border: 3px solid #8B4513 !important;
+    border-radius: 0 !important;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+}
+body.prehistoric .contact-detail:nth-child(1) h4::before {
+    content: '🦖 ';
+}
+body.prehistoric .contact-detail:nth-child(2) h4::before {
+    content: '📜 ';
+}
+body.prehistoric .contact-detail:nth-child(3) h4::before {
+    content: '🌋 ';
+}
+body.prehistoric .contact-detail:nth-child(4) h4::before {
+    content: '🦴 ';
+}
+body.prehistoric .contact-detail:nth-child(5) h4::before {
+    content: '🌿 ';
+}
+body.prehistoric .contact-detail:nth-child(6) h4::before {
+    content: '🪨 ';
+}
+body.prehistoric .form-group input,
+body.prehistoric .form-group textarea {
+    background: #3d2a1e !important;
+    border: 2px solid #8B4513 !important;
+    color: #f5deb3 !important;
+    border-radius: 0 !important;
+}
+body.prehistoric .form-group input::placeholder,
+body.prehistoric .form-group textarea::placeholder {
+    color: #a89070 !important;
+}
+body.prehistoric .submit-btn {
+    background: linear-gradient(180deg, #8B4513 0%, #654321 100%) !important;
+    border: 3px solid #FFD700 !important;
+    border-radius: 0 !important;
+    box-shadow: 3px 3px 0 #000;
+}
+body.prehistoric .email-protected {
+    background: #3d2a1e !important;
+    border: 2px solid #8B4513 !important;
+    border-radius: 0 !important;
+}
+
+/* Footer prehistoric */
+body.prehistoric footer {
+    background: linear-gradient(180deg, #654321 0%, #3d2914 100%) !important;
+    border-top: 4px solid #FFD700;
+}
+body.prehistoric footer::before {
+    display: none;
+}
+body.prehistoric footer::after {
+    content: '🦖🌴🦕🌋🦴🌿🦖🌴🦕🌋🦴🌿';
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    letter-spacing: 0.5rem;
+    filter: grayscale(30%);
 }
