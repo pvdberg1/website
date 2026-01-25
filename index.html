@@ -80,8 +80,17 @@
         .dino-easter-egg:hover {
             transform: scale(1.2);
         }
+        /* Show desktop dino, hide mobile dino on larger screens */
+        .dino-mobile {
+            display: none;
+        }
         @media (max-width: 768px) {
-            .dino-easter-egg {
+            /* Hide desktop dino, show mobile dino on small screens */
+            .dino-desktop {
+                display: none;
+            }
+            .dino-mobile {
+                display: inline-block;
                 font-size: 1.2rem;
                 padding: 0.25rem;
             }
@@ -136,8 +145,8 @@
                 </div>
             </div>
             <div class="hero-content">
-                <h1>Evolutionary Modelling Group <span class="dino-easter-egg" id="dino-trigger" title="Click me!">🦕</span></h1>
-                <p class="subtitle">PI: Piet van den Berg</p>
+                <h1>Evolutionary Modelling Group <span class="dino-easter-egg dino-desktop" id="dino-trigger-desktop" title="Click me!">🦕</span></h1>
+                <p class="subtitle">PI: Piet van den Berg <span class="dino-easter-egg dino-mobile" id="dino-trigger-mobile" title="Click me!">🦕</span></p>
                 <p class="hero-intro">
                     We develop evolutionary models to understand how living organisms adapt. Using computer simulations and mathematical techniques, we investigate everything from antibiotic resistance to the evolution of human language.
                 </p>
@@ -325,23 +334,41 @@
         });
 
         // Dinosaur Easter Egg - Toggle Prehistoric Theme!
-        const dinoTrigger = document.getElementById('dino-trigger');
-        if (dinoTrigger) {
-            dinoTrigger.addEventListener('click', function() {
-                document.body.classList.toggle('prehistoric');
-                if (document.body.classList.contains('prehistoric')) {
-                    this.textContent = '🦖';
-                    sessionStorage.setItem('prehistoricMode', 'true');
-                } else {
-                    this.textContent = '🦕';
-                    sessionStorage.removeItem('prehistoricMode');
-                }
-            });
-            // Check if prehistoric mode was enabled (survives navigation, not refresh)
-            if (sessionStorage.getItem('prehistoricMode') === 'true') {
-                document.body.classList.add('prehistoric');
-                dinoTrigger.textContent = '🦖';
+        const dinoDesktop = document.getElementById('dino-trigger-desktop');
+        const dinoMobile = document.getElementById('dino-trigger-mobile');
+
+        function togglePrehistoric(clickedDino) {
+            document.body.classList.toggle('prehistoric');
+            const isPrehistoric = document.body.classList.contains('prehistoric');
+            const newEmoji = isPrehistoric ? '🦖' : '🦕';
+
+            // Update both dinosaurs
+            if (dinoDesktop) dinoDesktop.textContent = newEmoji;
+            if (dinoMobile) dinoMobile.textContent = newEmoji;
+
+            if (isPrehistoric) {
+                sessionStorage.setItem('prehistoricMode', 'true');
+            } else {
+                sessionStorage.removeItem('prehistoricMode');
             }
+        }
+
+        if (dinoDesktop) {
+            dinoDesktop.addEventListener('click', function() {
+                togglePrehistoric(this);
+            });
+        }
+        if (dinoMobile) {
+            dinoMobile.addEventListener('click', function() {
+                togglePrehistoric(this);
+            });
+        }
+
+        // Check if prehistoric mode was enabled (survives navigation, not refresh)
+        if (sessionStorage.getItem('prehistoricMode') === 'true') {
+            document.body.classList.add('prehistoric');
+            if (dinoDesktop) dinoDesktop.textContent = '🦖';
+            if (dinoMobile) dinoMobile.textContent = '🦖';
         }
     </script>
 </body>

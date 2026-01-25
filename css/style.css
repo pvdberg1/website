@@ -1113,6 +1113,21 @@ body.prehistoric .dino-easter-egg {
     animation: dinoWalk 0.5s steps(2) infinite;
     vertical-align: middle;
 }
+body.prehistoric .dino-mobile {
+    display: none;
+}
+body.prehistoric .dino-desktop {
+    display: inline-block;
+}
+@media (max-width: 768px) {
+    body.prehistoric .dino-desktop {
+        display: none;
+    }
+    body.prehistoric .dino-mobile {
+        display: inline-block;
+        font-size: 1.3rem;
+    }
+}
 @keyframes dinoWalk {
     0%, 100% { transform: scaleX(1); }
     50% { transform: scaleX(-1); }
