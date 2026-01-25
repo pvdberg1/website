@@ -1086,8 +1086,14 @@ body.prehistoric .group-photo-normal {
 }
 body.prehistoric .group-photo-prehistoric {
     display: block;
+    width: 100%;
     border-radius: 0 !important;
     border: 4px solid #654321;
+}
+@media (max-width: 768px) {
+    body.prehistoric .group-photo-prehistoric {
+        border-width: 3px;
+    }
 }
 body.prehistoric .person-photo-real {
     border-radius: 0 !important;
@@ -1319,4 +1325,132 @@ body.prehistoric footer::after {
     margin-top: 1rem;
     letter-spacing: 0.5rem;
     filter: grayscale(30%);
+}
+
+/* ===== PREHISTORIC MODE - MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+    /* Smaller, more readable font on mobile */
+    body.prehistoric {
+        font-size: 0.7rem !important;
+    }
+    body.prehistoric * {
+        font-family: 'Press Start 2P', 'Courier New', monospace !important;
+        line-height: 1.8 !important;
+    }
+    body.prehistoric h1 {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+    body.prehistoric h2 {
+        font-size: 0.75rem !important;
+        line-height: 1.5 !important;
+    }
+    body.prehistoric h3 {
+        font-size: 0.7rem !important;
+    }
+    body.prehistoric p,
+    body.prehistoric li,
+    body.prehistoric span {
+        font-size: 0.6rem !important;
+        line-height: 2 !important;
+    }
+
+    /* Dinosaur trigger - larger tap target on mobile */
+    body.prehistoric .dino-easter-egg {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    /* Icons inline instead of float on mobile */
+    body.prehistoric .section h2::before {
+        float: none;
+        display: inline;
+    }
+    body.prehistoric .research-topic h3::after,
+    body.prehistoric .year-header::after {
+        float: none;
+        display: inline;
+    }
+
+    /* Reduce card padding on mobile */
+    body.prehistoric .section,
+    body.prehistoric .topic-card,
+    body.prehistoric .research-topic,
+    body.prehistoric .pub-item,
+    body.prehistoric .person-card-simple {
+        padding: 1rem !important;
+        box-shadow: 2px 2px 0 rgba(0,0,0,0.5) !important;
+    }
+
+    /* Hero section adjustments */
+    body.prehistoric .hero-wrapper {
+        padding: 0.5rem;
+        box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+    }
+    body.prehistoric .hero-content h1 {
+        font-size: 0.85rem !important;
+    }
+    body.prehistoric .hero-content .subtitle {
+        font-size: 0.6rem !important;
+    }
+
+    /* Navigation on mobile */
+    body.prehistoric nav a {
+        font-size: 0.6rem !important;
+        padding: 0.5rem !important;
+    }
+    body.prehistoric .site-title {
+        font-size: 0.55rem !important;
+    }
+
+    /* Publications - improve readability */
+    body.prehistoric .pub-title {
+        font-size: 0.65rem !important;
+    }
+    body.prehistoric .pub-authors,
+    body.prehistoric .pub-venue {
+        font-size: 0.55rem !important;
+    }
+    body.prehistoric .pub-links a {
+        font-size: 0.5rem !important;
+        padding: 0.3rem 0.5rem !important;
+    }
+
+    /* Footer emoji - smaller on mobile */
+    body.prehistoric footer::after {
+        font-size: 0.9rem;
+        letter-spacing: 0.2rem;
+    }
+    body.prehistoric footer p {
+        font-size: 0.5rem !important;
+    }
+
+    /* Person cards on mobile */
+    body.prehistoric .person-photo-placeholder {
+        width: 120px !important;
+        height: 120px !important;
+        font-size: 1.5rem !important;
+    }
+
+    /* BlueSky sidebar on mobile */
+    body.prehistoric .bluesky-post-text {
+        font-size: 0.55rem !important;
+    }
+    body.prehistoric .bluesky-sidebar-header h3 {
+        font-size: 0.6rem !important;
+    }
+
+    /* Contact form on mobile */
+    body.prehistoric .form-group label {
+        font-size: 0.6rem !important;
+    }
+    body.prehistoric .form-group input,
+    body.prehistoric .form-group textarea {
+        font-size: 0.6rem !important;
+        padding: 0.5rem !important;
+    }
+    body.prehistoric .submit-btn {
+        font-size: 0.55rem !important;
+        padding: 0.6rem 1rem !important;
+    }
 }
