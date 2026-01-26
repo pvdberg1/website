@@ -66,7 +66,7 @@ h2::after {
     position: absolute;
     bottom: -4px;
     left: 0;
-    width: 80px;
+    width: 100%;
     height: 4px;
     background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--accent-warm));
     border-radius: 2px;
@@ -342,7 +342,7 @@ main {
 
 /* Darker warm sections for bottom cards */
 .section.warm-section-dark {
-    background: linear-gradient(135deg, #eae0d2 0%, #e2d6c8 100%);
+    background: linear-gradient(135deg, #ece3d6 0%, #e5dbcd 100%);
 }
 
 .section-intro {
@@ -1046,7 +1046,7 @@ body.prehistoric .section h2::after {
     position: absolute;
     bottom: -4px;
     left: 0;
-    width: 80px;
+    width: 100%;
     height: 4px;
     background: #FFD700 !important;
     border-radius: 2px;
@@ -1110,8 +1110,10 @@ body.prehistoric .hero-logos {
 }
 body.prehistoric .dino-easter-egg {
     font-size: 1.8rem;
-    animation: dinoWalk 0.5s steps(2) infinite;
+    animation: dinoWalk 2s ease-in-out infinite;
     vertical-align: middle;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
 }
 body.prehistoric .dino-mobile {
     display: none;
@@ -1126,11 +1128,12 @@ body.prehistoric .dino-desktop {
     body.prehistoric .dino-mobile {
         display: inline-block;
         font-size: 1.3rem;
+        padding: 0.5rem;
     }
 }
 @keyframes dinoWalk {
-    0%, 100% { transform: scaleX(1); }
-    50% { transform: scaleX(-1); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
 }
 
 /* BlueSky sidebar prehistoric */
