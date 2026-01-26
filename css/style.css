@@ -346,8 +346,8 @@ main {
 }
 
 .section-intro {
-    font-size: 1.1rem;
-    color: var(--text-light);
+    font-size: 1rem;
+    color: var(--text-color);
     margin-bottom: 1.5rem;
 }
 
@@ -1108,32 +1108,19 @@ body.prehistoric .hero-logos {
     border: 2px solid #8B4513;
     border-radius: 0 !important;
 }
-body.prehistoric .dino-easter-egg {
-    font-size: 1.8rem;
+/* Dinosaur button in prehistoric mode */
+body.prehistoric .dino-button {
+    background: linear-gradient(135deg, #8B4513 0%, #654321 100%);
+    box-shadow: 0 2px 8px rgba(139, 69, 19, 0.5);
     animation: dinoWalk 2s ease-in-out infinite;
-    vertical-align: middle;
-    padding: 0.3rem 0.5rem;
-    cursor: pointer;
+    border: 2px solid #FFD700;
 }
-body.prehistoric .dino-mobile {
-    display: none;
-}
-body.prehistoric .dino-desktop {
-    display: inline-block;
-}
-@media (max-width: 768px) {
-    body.prehistoric .dino-desktop {
-        display: none;
-    }
-    body.prehistoric .dino-mobile {
-        display: inline-block;
-        font-size: 1.3rem;
-        padding: 0.5rem;
-    }
+body.prehistoric .dino-button:hover {
+    box-shadow: 0 3px 12px rgba(139, 69, 19, 0.6);
 }
 @keyframes dinoWalk {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-3px); }
+    50% { transform: translateY(-5px); }
 }
 
 /* BlueSky sidebar prehistoric */
@@ -1373,10 +1360,11 @@ body.prehistoric footer::after {
         line-height: 2 !important;
     }
 
-    /* Dinosaur trigger - larger tap target on mobile */
-    body.prehistoric .dino-easter-egg {
-        font-size: 1.5rem;
-        padding: 0.5rem;
+    /* Dinosaur button on mobile */
+    body.prehistoric .dino-button {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
     }
 
     /* Icons inline instead of float on mobile */

@@ -44,7 +44,13 @@
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
             transition: box-shadow 0.2s ease;
+            border-left: 4px solid var(--primary-color);
         }
+        .research-topic:nth-child(2) { border-left-color: var(--accent-color); }
+        .research-topic:nth-child(3) { border-left-color: var(--accent-warm); }
+        .research-topic:nth-child(4) { border-left-color: var(--accent-coral); }
+        .research-topic:nth-child(5) { border-left-color: var(--primary-light); }
+        .research-topic:nth-child(6) { border-left-color: var(--primary-color); }
         .research-topic:hover {
             box-shadow: var(--shadow-hover);
         }
@@ -53,7 +59,7 @@
             color: var(--secondary-color);
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
-            border-bottom: 3px solid var(--primary-color);
+            border-bottom: 3px solid currentColor;
             display: inline-block;
         }
         .research-topic h4 {

@@ -47,12 +47,19 @@
             box-shadow: var(--shadow);
             margin-bottom: 1.5rem;
             transition: box-shadow 0.2s ease;
+            border-left: 4px solid var(--primary-color);
         }
+        .person-card-simple:nth-child(2) { border-left-color: var(--accent-color); }
+        .person-card-simple:nth-child(3) { border-left-color: var(--accent-warm); }
+        .person-card-simple:nth-child(4) { border-left-color: var(--accent-coral); }
+        .person-card-simple:nth-child(5) { border-left-color: var(--primary-light); }
+        .person-card-simple:nth-child(6) { border-left-color: var(--primary-color); }
         .person-card-simple:hover {
             box-shadow: var(--shadow-hover);
         }
         .person-card-simple.pi {
             border: 2px solid var(--primary-color);
+            border-left: 4px solid var(--primary-color);
             background: linear-gradient(135deg, var(--white) 0%, #f0f8f8 100%);
         }
         .person-photo-placeholder {
